@@ -2,7 +2,7 @@
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 # More info on Python, GitHub Actions, and Azure App Service: https://aka.ms/python-webapps-actions
 
-name: Build and deploy Python app to Azure Web App - pocsynechron
+name: Build and deploy Python app to Azure Web App - POCsynechron
 
 on:
   push:
@@ -65,14 +65,14 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F87B12090B46407D8FFE815D71F8C2D3 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_513C80411C3749B58F38F0604E07C5A8 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_3902BEE677344ED4A8F21616EE835715 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_8AA0930B11774DF69C00496C7B7F943F }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_9AA0B7B1F44A4A96B3FF5BFE79601038 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BCBCEFACB918446D8C82497B8CAD8690 }}
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
         id: deploy-to-webapp
         with:
-          app-name: 'pocsynechron'
+          app-name: 'POCsynechron'
           slot-name: 'Production'
           
